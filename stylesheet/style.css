@@ -465,13 +465,41 @@ nav {
 .como-receber .content img {
     width: 60%;
 }
-.como-receber .content a {
-    background-color: #777;
-    border-radius: 5px;
-    color: #fff;
-    display: block;
-    margin-top: 8px;
+.como-receber .footer {
+    text-align: center;
+}
+.como-receber .footer a {
+    color: #70cee4;
     padding: 2px;
+}
+.como-receber .content.modalidades {
+    text-align: left;
+}
+.content.modalidades img {
+    float: left;
+    margin-right: 15px;
+}
+.content.modalidades h5 {
+    font-size: 17px;
+}
+.content.modalidades .separador {
+    margin: 7px 0;
+    padding: 5px;
+    text-align: center;
+}
+.content.modalidades .separador a {
+    background-color: lightgrey;
+    border-radius: 50%;
+    color: #fff;
+    font-family: 'latolight', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    margin-right: 10px;
+    padding: 8px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
 }
 
 /* Section Mockup */
