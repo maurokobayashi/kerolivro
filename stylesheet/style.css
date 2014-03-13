@@ -432,10 +432,46 @@ nav {
     padding: 30px 0;
 }
 
-/* Section Como Conseguir */
-.how-to {
+/* Section Como Receber Livros */
+.como-receber {
     background-color: #F8f8f8;
     border-top:1px solid #EEE;
+}
+.como-receber .passos {
+    margin-top: 30px;
+}
+.como-receber .header {
+    padding: 10px;
+}
+.como-receber .header .numero {
+    background-color: #777;
+    border-radius: 50%;
+    color: #fff;
+    float: left;
+    font-family: 'latolight', sans-serif;
+    font-size: 16px;
+    height: 30px;
+    margin-right: 10px;
+    padding: 2px;
+    position: relative;
+    text-align: center;
+    vertical-align: middle;
+    width: 30px;
+}
+.como-receber .content {
+    padding: 10px;
+    text-align: center;
+}
+.como-receber .content img {
+    width: 60%;
+}
+.como-receber .content a {
+    background-color: #777;
+    border-radius: 5px;
+    color: #fff;
+    display: block;
+    margin-top: 8px;
+    padding: 2px;
 }
 
 /* Section Mockup */
