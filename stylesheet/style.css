@@ -462,8 +462,12 @@ nav {
     padding: 10px;
     text-align: center;
 }
+.como-receber .content p {
+    line-height: 20px;
+    text-align: justify;
+}
 .como-receber .content img {
-    width: 60%;
+    width: 120px;
 }
 .como-receber .footer {
     text-align: center;
@@ -472,8 +476,12 @@ nav {
     color: #70cee4;
     padding: 2px;
 }
+.como-receber .footer a:hover {
+    text-decoration: underline;
+}
 .como-receber .content.modalidades {
-    text-align: left;
+    padding: 10px 20px;
+    text-align: justify;
 }
 .content.modalidades img {
     float: left;
@@ -483,7 +491,7 @@ nav {
     font-size: 17px;
 }
 .content.modalidades .separador {
-    margin: 7px 0;
+    margin: 10px 0;
     padding: 5px;
     text-align: center;
 }
@@ -492,14 +500,13 @@ nav {
     border-radius: 50%;
     color: #fff;
     font-family: 'latolight', sans-serif;
-    font-size: 16px;
-    height: 30px;
-    margin-right: 10px;
-    padding: 8px;
+    font-size: 14px;
+    height: 25px;
+    padding: 6px;
     position: relative;
     text-align: center;
     vertical-align: middle;
-    width: 30px;
+    width: 25px;
 }
 
 /* Section Mockup */
@@ -900,6 +907,8 @@ and (max-width : 568px) {
 
   	.vantagens .tiles.four_up > li {width:100%; padding-bottom: 20px;}
 
+    .como-receber .footer {margin-bottom: 20px;}
+
   	#testimonial, #donation {position: relative; bottom: auto;}
     #testimonial h2, #donation h2 {font-size: 20px; margin-bottom: 10px;}
 
@@ -1042,20 +1051,20 @@ and (max-width : 1024px) {
 }
 .pricing_block:hover .pricing_header {background:#44617f}
 .pricing_block .best {
-    background:#fa565a;
+    background: #70cee4;
     color: #FFFFFF;
     display: block;
     font-size: 12px;
     padding: 1px 4px;
     position: absolute;
-    right: -24px;
+    right: -32px;
     text-align: center;
-    top:12px;
+    top: 18px;
     transform: rotate(45deg);
     -webkit-transform: rotate(45deg);
     -ms-transform: rotate(45deg);
     -o-transform: rotate(45deg);
-    width: 100px;
+    width: 125px;
 }
 .pricing {
     padding:25px 0 10px 0;
