@@ -152,11 +152,9 @@ p a:hover {
 /* Button */
 
 .button {
-    background-color: rgba(255,255,255, 0.8);
-    /*background-color: #fff;*/
+    background-color: #777;
 	border-radius: 7px;
-	border: 1px solid #777;
-    color: #333;
+    color: #fff;
     font-family: 'latolight', sans-serif;
     text-transform: uppercase;
     padding:15px 20px;
@@ -165,10 +163,8 @@ p a:hover {
     text-align: center;
 }
 .button:hover {
-    /*background-color: rgba(255,255,255, 0.8);*/
-    background-color: #777;
+    background-color: #444;
     color: #fff;
-    /*color:#000;*/
 	 -webkit-transition: all 0.2s ease-in-out;
     -moz-transition: all 0.2s ease-in-out;
     -ms-transition: all 0.2s ease-in-out;
@@ -259,9 +255,12 @@ p a:hover {
 .button2.orange:active {
   background: #BF6819; }
 
+.button2.blue {
+  background: #32B7D6; }
+
 .button2.white {
   background: white;
-  color: #F68620; }
+  color: #32B7D6; }
 
 .button2.white:hover, .button2.white:active {
   background: white; }
@@ -429,7 +428,7 @@ nav {
 .vantagens {
     background: #FFF;
     border-top:1px solid #EEE;
-    padding: 30px 0;
+    padding: 20px 0;
 }
 
 /* Section Como Receber Livros */
@@ -1051,7 +1050,7 @@ and (max-width : 1024px) {
 }
 .pricing_block:hover .pricing_header {background:#44617f}
 .pricing_block .best {
-    background: #70cee4;
+    background: #32B7D6;
     color: #FFFFFF;
     display: block;
     font-size: 12px;
@@ -1085,18 +1084,17 @@ and (max-width : 1024px) {
 .pricing_block .desc_block {margin-bottom:30px}
 .pricing_block .desc_block, .prices-table .title_block {color:#fff}
 .pricing_block .botton_link {
-    background: #70cee4;
+    background: #32B7D6;
     border: 0;
     border-radius: 4px;
-    box-shadow: 0 3px 0 #48b8d2;
     color: #fff;
     margin-top:0;
     padding:10px 30px;
 }
 .pricing_block .botton_list .botton_link:hover {
-    box-shadow:none;
     color: #fff;
-    background: #70cee4;
+    background: #32B7D6;
+    border: 1px solid #32B7D6;
 }
 
 
