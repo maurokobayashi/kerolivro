@@ -79,7 +79,7 @@ var cbpAnimatedHeader = (function() {
 /*-----------------------------------------------------------------------------------*/
 
 
-			new cbpScroller( document.getElementById( 'cbp-so-scroller' ) );
+			new cbpScroller( document.getElementById( 'scroll-to-vantagens' ) );
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -191,13 +191,9 @@ function validateEmail(email) {
 /*	09. SUBSCRIPTION MODAL
 /*-----------------------------------------------------------------------------------*/
 
-	$('.basic.modal')
-        .modal()
-    ;
-
 	$('#call-to-action').click(function() {
 		console.log('jolie');
-		$('.basic.modal').modal('show');
+		console.log($('.basic.modal').modal('show'));
 	});
 
 });

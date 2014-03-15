@@ -491,16 +491,16 @@ nav {
     margin: 0;
 }
 .content.modalidades img {
-    float: right;
-    margin: 0 0 5px 15px;
+    float: left;
+    margin: 0 15px 10px 0;
     position: relative;
-    top: 10px;
+    top: 5px;
 }
 .content.modalidades h5 {
     font-size: 17px;
 }
 .content.modalidades .separador {
-    margin-top: 8px;
+    margin: 5px 0 5px 0;
     padding: 5px;
     text-align: center;
 }
@@ -539,7 +539,7 @@ nav {
 	background: #FFF;}
 
 
-.cbp-so-scroller {
+.scroll-to-vantagens {
 	overflow: hidden;
 	z-index: 9999;
 	position: relative;}
