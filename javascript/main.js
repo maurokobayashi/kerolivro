@@ -188,12 +188,15 @@ function validateEmail(email) {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	09. SUBSCRIPTION MODAL
+/*	09. SUBSCRIPTION DIMMER
 /*-----------------------------------------------------------------------------------*/
 
-	$('#call-to-action').click(function() {
-		console.log('jolie');
-		console.log($('.basic.modal').modal('show'));
+	$('#call-to-action-basico').click(function() {
+		$('.page.dimmer').dimmer('show');
+	});
+
+	$('#call-to-action-premium').click(function() {
+		$('.page.dimmer').dimmer('show');
 	});
 
 });

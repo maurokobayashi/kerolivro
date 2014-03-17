@@ -157,15 +157,15 @@ p a:hover {
 /* Button */
 
 .button {
-    background-color: #777;
-	border-radius: 7px;
-    color: #fff;
-    font-family: 'latolight', sans-serif;
-    text-transform: uppercase;
-    padding:15px 20px;
-    font-size: 16px;
-    line-height: 90px;
-    text-align: center;
+  background-color: #777;
+  border-radius: 7px;
+  color: #fff;
+  font-family: 'latolight', sans-serif;
+  text-transform: uppercase;
+  padding:15px 20px;
+  font-size: 16px;
+  line-height: 90px;
+  text-align: center;
 }
 .button:hover {
     background-color: #444;
@@ -386,32 +386,38 @@ nav {
 	width:100%;
 	height:700px;
 	color:#FFF;
-	/*background:url('../image/bg/bg1.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg2.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg3.jpg')  #363f48 fixed;*/
-    background:url('../image/bg/bg4.jpg')  #363f48 fixed;
-    /*background:url('../image/bg/bg5.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg6.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg7.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg8.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg9.jpg')  #363f48 fixed;*/
-    /*background:url('../image/bg/bg10.jpg')  #363f48 fixed;*/
-    z-index: 999998;
-    position: relative;
-    background-size: 100%;
+  background:url('../image/bg/bg1.jpg')  #363f48 fixed;
+  /*background:url('http://farm6.staticflickr.com/5066/5610268523_f7b862e9fd_b.jpg')  #363f48 fixed;*/
+  /*background:url('http://farm6.staticflickr.com/5292/5545688048_6abe208e64_b.jpg')  #363f48 fixed;*/
+  /*background:url('http://farm3.staticflickr.com/2323/1535030082_501e1c7ce4_b.jpg')  #363f48 fixed;*/
+  z-index: 999998;
+  position: relative;
+  background-size: 100%;
 }
-
-
-#header .twelve.columns {
+#header .nine.columns {
 	margin-top:5%;
-	text-align: left; }
+
+  background-color: rgba(255,255,255,0.3);
+  border-radius: 15px;
+  padding: 30px;
+}
 
 #header .logo {
 	width: 100%; }
 
+#header h1 {
+  color: #666;
+  text-shadow: 0px 0px 20px #fff;
+  font-family: 'Pacifico';
+  font-size: 38px;
+  margin: 0;
+  padding-top:20px;
+}
+
 #header h2 {
-    color: #000;
+  color: #000;
 	padding:20px 0;
+  text-shadow: 0px 0px 10px #fff;
 }
 
 #header h2 .subheading {
@@ -685,17 +691,17 @@ nav {
 
 #donation {
     left: 0;
-    padding: 60px 0 60px;
-    position: relative;
+    padding: 50px 0;
+    /*position: relative;*/
     width: 100%;
-    z-index: 999;
+    /*z-index: 999;*/
     display: block;
     background: #70cee4;
     border-top:1px solid #eee;
 
-    position: fixed;
-    bottom:130px;
-    z-index: 9;
+    /*position: fixed;*/
+    /*bottom:130px;*/
+    /*z-index: 9;*/
     width:100%;
 }
 #donation a {
@@ -769,18 +775,18 @@ form {
 #footerSpacer {
     background-color: rgba(0, 0, 0, 0) !important;
     display: block;
-    min-height: 310px;}
+    min-height: 170px;}
 
 /* Footer General */
 
 #footer {
 	bottom: 0;
-    left: 0;
-    padding: 40px 0 40px;
-    position: fixed;
-    width: 100%;
-    font-size:14px;
-    z-index: 1;
+  left: 0;
+  padding: 40px 0 40px;
+  position: fixed;
+  width: 100%;
+  font-size:14px;
+  z-index: 1;
 	background: #FFF;
 }
 #footer .text-stuff {
@@ -916,10 +922,14 @@ and (max-width : 568px) {
 
   	.vantagens .tiles.four_up > li {width:100%; padding-bottom: 20px;}
 
-    .como-receber .footer {margin-bottom: 20px;}
+    .como-receber .content {margin-bottom: 20px;}
 
   	#testimonial, #donation {position: relative; bottom: auto;}
     #testimonial h2, #donation h2 {font-size: 20px; margin-bottom: 10px;}
+
+    .call-to-action-form input {width:100% !important; display: block !important;}
+    .call-to-action-form .signup {margin-top: 5px; margin-left: 0px !important;}
+    .call-to-action-form .email {margin-top: 5px; margin-left: 0px !important;}
 
   	#signup {position: relative; bottom: auto;}
 
@@ -1006,12 +1016,13 @@ and (max-width : 1024px) {
 
 
 
-/* Go down text & Button */
+/* Go down text & Photo credits */
 
 .go-down {
+    background-color: rgba(0, 0, 0, 0.3);
     bottom: 0;
     cursor: pointer;
-    height: 70px;
+    height: 75px;
     left: 0;
     position: absolute;
     right: 0;
@@ -1025,7 +1036,7 @@ and (max-width : 1024px) {
 }
 
 .go-down .saiba-mais {
-    bottom: 25px;
+    bottom: 35px;
     left: 0;
     height: 30px;
     margin: auto;
@@ -1040,7 +1051,53 @@ and (max-width : 1024px) {
     -ms-transition: padding-top 0.15s ease-out;
 }
 
+.photo-credits {
+  bottom: 50px;
+  left: 0;
+  height: 10px;
+  margin: auto;
+  padding-right: 40px;
+  position: absolute;
+  right: 0;
+  text-align: right;
+}
+.photo-credits p {
+  color: lightgrey;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.photo-credits a {
+  color: lightgrey;
+}
 
+
+/* Subscription Form */
+.call-to-action-form {
+  margin: 40px 0 20px;
+}
+.call-to-action-form input {
+  border: none;
+  border-radius: 4px;
+  display: inline;
+  height: 50px;
+}
+.call-to-action-form .email {
+  color: #777;
+  font-size: 15px;
+  padding: 10px 15px;
+  width: 300px;
+}
+.call-to-action-form .signup {
+  background-color: #32B7D6;
+  color: #fff;
+  cursor: pointer;
+  font-size: 20px;
+  margin-left: 5px;
+  width: 200px
+}
+.no-spam {
+  font-size: 13px;
+}
 
 
 /* Pricing */
