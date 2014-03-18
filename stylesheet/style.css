@@ -536,7 +536,9 @@ nav {
 /* Section Planos */
 .planos {
 	background: #F8f8f8;
-	border-top:1px solid #EEE; }
+	border-top:1px solid #EEE;
+  padding-top: 25px;
+}
 
 /* Container  */
 .container {
@@ -1019,7 +1021,7 @@ and (max-width : 1024px) {
 /* Go down text & Photo credits */
 
 .go-down {
-    background-color: rgba(0, 0, 0, 0.3);
+    /*background-color: rgba(0, 0, 0, 0.3);*/
     bottom: 0;
     cursor: pointer;
     height: 75px;
@@ -1027,9 +1029,9 @@ and (max-width : 1024px) {
     position: absolute;
     right: 0;
 }
-.go-down:hover {
+/*.go-down:hover {
     background-color: rgba(0, 0, 0, 0.5);
-}
+}*/
 .go-down img {
     height: 27px;
     width: 27px;

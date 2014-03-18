@@ -7,14 +7,16 @@ $( document ).ready(function() { // Document ready
 /*-----------------------------------------------------------------------------------*/
 
 
-  $(document).ready(function(){
-	//.parallax(xPosition, speedFactor, outerHeight) options:
-	//xPosition - Horizontal position of the element
-	//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
-	//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
-	$('#header').parallax("center", 0.5, false);
+  	$(document).ready(function(){
+		//.parallax(xPosition, speedFactor, outerHeight) options:
+		//xPosition - Horizontal position of the element
+		//inertia - speed to move relative to vertical scroll. Example: 0.1 is one tenth the speed of scrolling, 2 is twice the speed of scrolling
+		//outerHeight (true/false) - Whether or not jQuery should use it's outerHeight option to determine when a section is in the viewport
+		$('#header').parallax("center", 0.5, false);
+	})
 
-})
+	trackPageView();
+	setupMailChimp();
 
 
 
@@ -192,11 +194,92 @@ function validateEmail(email) {
 /*-----------------------------------------------------------------------------------*/
 
 	$('#call-to-action-basico').click(function() {
-		$('.page.dimmer').dimmer('show');
+		showSubscriptionForm("basico");
 	});
 
 	$('#call-to-action-premium').click(function() {
-		$('.page.dimmer').dimmer('show');
+		showSubscriptionForm("premium");
 	});
+
+	function showSubscriptionForm(chosenPlan) {
+		window.location.href = "#planos"
+		$('.page.dimmer').dimmer('show');
+		$('#mce-EMAIL').focus();
+		$('#chosen-plan').val(chosenPlan);
+		trackChoosePlan(chosenPlan);
+	}
+
+	$('#mc-embedded-subscribe').click(function() {
+		var chosenPlan = $('#chosen-plan').val();
+		trackSubscriptionSubmit(chosenPlan);
+	})
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	10. MIXPANEL TRACKING EVENTS
+/*-----------------------------------------------------------------------------------*/
+
+	function trackPageView() {
+        console.log("page view tracked");
+        // mixpanel.register();
+        // mixpanel.track('page_view');
+    }
+
+    function trackChoosePlan(chosenPlan){
+    	console.log("choose plan tracked: plan => " + chosenPlan);
+        // mixpanel.register({'plan': chosenPlan});
+        // mixpanel.track('choose_plan');
+    }
+
+    function trackSubscriptionSubmit(chosenPlan) {
+    	console.log("subscription submit tracked: plan => " + chosenPlan);
+        // mixpanel.register({'plan': chosenPlan});
+        // mixpanel.track('subscription_submit');
+    }
+
+    function trackSubscriptionResponse(chosenPlan, response) {
+        // mixpanel.register({'plan': chosenPlan});
+        if (response.result === 'success') {
+            // mixpanel.track("subscription_success");
+       }
+    }
+
+/*-----------------------------------------------------------------------------------*/
+/*	11. MAILCHIMP SETUP
+/*-----------------------------------------------------------------------------------*/
+
+    function setupMailChimp(){
+		// $.ajaxChimp.translations.pt = {
+		//     1: 'Parabéns! Enviamos para você um email de confirmação.',
+		//     2: 'Informe o seu endereço de email.',
+		//     3: 'Verifique o seu endereço de email.',
+		//     4: 'Verifique o seu endereço de email.',
+		//     5: 'Verifique o seu endereço de email.',
+		//     6: 'Houve um problema desconhecido. Entre em contato com digaoi@kerolivro.com.br para solicitar o seu convite.'
+		// };
+		// $('#mc-embedded-subscribe-form').ajaxChimp({
+		//     url: 'http://lendo.us3.list-manage2.com/subscribe/post?u=f57b68c75f9b145d89a30c396&amp;id=413697787d',
+		//     callback: trackSubscriptionResponse,
+		//     language: 'pt'
+		// });
+	}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 });
