@@ -397,7 +397,7 @@ nav {
 #header .nine.columns {
 	margin-top:5%;
 
-  background-color: rgba(255,255,255,0.3);
+  background-color: rgba(255,255,255,0.5);
   border-radius: 15px;
   padding: 30px;
 }
@@ -406,10 +406,9 @@ nav {
 	width: 100%; }
 
 #header h1 {
-  color: #666;
-  text-shadow: 0px 0px 20px #fff;
+  color: #000;
   font-family: 'Pacifico';
-  font-size: 38px;
+  font-size: 35px;
   margin: 0;
   padding-top:20px;
 }
@@ -417,7 +416,7 @@ nav {
 #header h2 {
   color: #000;
 	padding:20px 0;
-  text-shadow: 0px 0px 10px #fff;
+  /*text-shadow: 0px 0px 10px #fff;*/
 }
 
 #header h2 .subheading {
@@ -1158,7 +1157,9 @@ and (max-width : 1024px) {
     border-radius: 4px;
     color: #fff;
     cursor: pointer;
-    margin-top:0;
+    display: block;
+    letter-spacing: 2px;
+    margin: 0 20px;
     padding:10px 30px;
 }
 .pricing_block .botton_list .botton_link:hover {
