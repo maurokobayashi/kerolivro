@@ -221,26 +221,26 @@ function validateEmail(email) {
 
 	function trackPageView() {
         console.log("page view tracked");
-        // mixpanel.register();
-        // mixpanel.track('page_view');
+        mixpanel.register();
+        mixpanel.track('page_view');
     }
 
     function trackChoosePlan(chosenPlan){
     	console.log("choose plan tracked: plan => " + chosenPlan);
-        // mixpanel.register({'plan': chosenPlan});
-        // mixpanel.track('choose_plan');
+        mixpanel.register({'plan': chosenPlan});
+        mixpanel.track('choose_plan');
     }
 
     function trackSubscriptionSubmit(chosenPlan) {
     	console.log("subscription submit tracked: plan => " + chosenPlan);
-        // mixpanel.register({'plan': chosenPlan});
-        // mixpanel.track('subscription_submit');
+        mixpanel.register({'plan': chosenPlan});
+        mixpanel.track('subscription_submit');
     }
 
-    function trackSubscriptionResponse(chosenPlan, response) {
-        // mixpanel.register({'plan': chosenPlan});
+    function trackSubscriptionResponse(response) {
+        mixpanel.register({'plan': 'blablabla'});
         if (response.result === 'success') {
-            // mixpanel.track("subscription_success");
+            mixpanel.track("subscription_success");
        }
     }
 
@@ -249,19 +249,19 @@ function validateEmail(email) {
 /*-----------------------------------------------------------------------------------*/
 
     function setupMailChimp(){
-		// $.ajaxChimp.translations.pt = {
-		//     1: 'Parabéns! Enviamos para você um email de confirmação.',
-		//     2: 'Informe o seu endereço de email.',
-		//     3: 'Verifique o seu endereço de email.',
-		//     4: 'Verifique o seu endereço de email.',
-		//     5: 'Verifique o seu endereço de email.',
-		//     6: 'Houve um problema desconhecido. Entre em contato com digaoi@kerolivro.com.br para solicitar o seu convite.'
-		// };
-		// $('#mc-embedded-subscribe-form').ajaxChimp({
-		//     url: 'http://lendo.us3.list-manage2.com/subscribe/post?u=f57b68c75f9b145d89a30c396&amp;id=413697787d',
-		//     callback: trackSubscriptionResponse,
-		//     language: 'pt'
-		// });
+		$.ajaxChimp.translations.pt = {
+		    1: 'Parabéns! Enviamos para você um email de confirmação.',
+		    2: 'Informe o seu endereço de email.',
+		    3: 'Verifique o seu endereço de email.',
+		    4: 'Verifique o seu endereço de email.',
+		    5: 'Verifique o seu endereço de email.',
+		    6: 'Houve um problema desconhecido. Entre em contato com digaoi@kerolivro.com.br para solicitar o seu convite.'
+		};
+		$('#mc-embedded-subscribe-form').ajaxChimp({
+		    url: 'http://lendo.us3.list-manage2.com/subscribe/post?u=f57b68c75f9b145d89a30c396&amp;id=45d8a9988c',
+		    callback: trackSubscriptionResponse,
+		    language: 'pt'
+		});
 	}
 
 

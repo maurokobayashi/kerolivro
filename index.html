@@ -29,21 +29,19 @@
           <script id="twitter-wjs" src="javascript/widgets.js"></script>
           <script src="javascript/modernizr-2.6.2.min.js"></script>  <!-- Modernizr /-->
           <script src="javascript/dimmer.min.js" type="text/javascript"></script> <!-- Dimmer - Semantic UI -->
+          <script type="application/javascript" src="javascript/jquery.ajaxchimp.js"></script>
 
         <link type="text/css" rel="stylesheet" href="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/style.css"><script type="text/javascript" charset="utf-8" src="chrome-extension://cpngackimfmofbokmjmljamhdncknpmg/js/page_context.js"></script>
 
         <!-- Start Mixpanel -->
-        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f);b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==
-            typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");for(g=0;g<i.length;g++)f(c,i[g]);
-        b._i.push([a,e,d])};b.__SV=1.2}})(document,window.mixpanel||[]);
-            mixpanel.init("c1d4171ac81851996f5bc3cde7f3fb5f");
-            mixpanel.set_config({debug: true});
+        <script type="text/javascript">(function(e,b){if(!b.__SV){var a,f,i,g;window.mixpanel=b;b._i=[];b.init=function(a,e,d){function f(b,h){var a=h.split(".");2==a.length&&(b=b[a[0]],h=a[1]);b[h]=function(){b.push([h].concat(Array.prototype.slice.call(arguments,0)))}}var c=b;"undefined"!==typeof d?c=b[d]=[]:d="mixpanel";c.people=c.people||[];c.toString=function(b){var a="mixpanel";"mixpanel"!==d&&(a+="."+d);b||(a+=" (stub)");return a};c.people.toString=function(){return c.toString(1)+".people (stub)"};i="disable track track_pageview track_links track_forms register register_once alias unregister identify name_tag set_config people.set people.set_once people.increment people.append people.track_charge people.clear_charges people.delete_user".split(" ");
+            for(g=0;g<i.length;g++)f(c,i[g]);b._i.push([a,e,d])};b.__SV=1.2;a=e.createElement("script");a.type="text/javascript";a.async=!0;a.src=("https:"===e.location.protocol?"https:":"http:")+'//cdn.mxpnl.com/libs/mixpanel-2.2.min.js';f=e.getElementsByTagName("script")[0];f.parentNode.insertBefore(a,f)}})(document,window.mixpanel||[]);
+            mixpanel.init("c673c1d8ad22cead996324f8d053c80d");
         </script>
         <!-- End Mixpanel -->
-
     </head>
 
-    <body screen_capture_injected="true">
+    <body>
 
         <!-- NAVIGATION ############################################### -->
 		<!-- Mobile Menu -->
@@ -53,8 +51,8 @@
 					<div class="mobile-menu-inner">
 						<ul class="nav-mobile">
                     <li><a href="#scroll-to-vantagens">O Kerolivro</a></li>
-                    <li><a href="http://www.baribal.be/appi/#">Como receber livros</a></li>
-                    <li><a href="http://www.baribal.be/appi/#">Participe</a></li>
+                    <li><a href="#scroll-to-como-receber">Como receber livros</a></li>
+                    <li><a href="#scroll-to-planos">Participe</a></li>
 						</ul>
 					</div>
 				</div>
@@ -66,13 +64,14 @@
 		<div class="cbp-af-header">
 			<nav class="row">
 				 <div id="logo">
-                    <a href="http://www.baribal.be/appi/#">
-                        <img alt="YOURLOGO" src="image/logotop.png">
+                    <a href="#" style="font-family:'Pacifico'; font-size:32px;">
+                        <!-- <img alt="Kerolivro" src="image/logotop.png"> -->
+                        Kerolivro
                     </a>
                 </div>
 				<ul id="nav">
-					<li><a href="http://www.baribal.be/appi/#">Participe</a></li>
-					<li><a href="http://www.baribal.be/appi/#">Como receber livros</a></li>
+					<li><a href="#scroll-to-planos">Participe</a></li>
+					<li><a href="#scroll-to-como-receber">Como receber livros</a></li>
 					<li><a href="#scroll-to-vantagens">O Kerolivro</a></li>
 				</ul>
 			</nav>
@@ -266,7 +265,7 @@
                         <div class="three columns">
                             <div class="header">
                                 <div class="numero">3</div>
-                                <h4>Avalie a transação</h4>
+                                <h4>Avalie como foi</h4>
                             </div>
                             <div class="content">
                                 <img src="image/like.png">
@@ -491,10 +490,10 @@
                                         <input type="email" id="mce-EMAIL" name="EMAIL" class="email" placeholder="Seu e-mail">
                                         <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                                         <div style="position: absolute; left: -5000px;">
-                                            <input type="text" name="b_f57b68c75f9b145d89a30c396_413697787d" value="">
+                                            <input type="text" name="b_f57b68c75f9b145d89a30c396_45d8a9988c" value="">
                                         </div>
                                         <input type="submit" id="mc-embedded-subscribe" class="signup" value="Participar">
-                                        <input type="hidden" id="chosen-plan" value="">
+                                        <input type="hidden" id="chosen-plan" name="PLAN" value="">
                                     </form>
                                     <!-- End MailChimp Signup Form -->
 
