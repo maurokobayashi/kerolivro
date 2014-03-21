@@ -1100,6 +1100,10 @@ and (max-width : 1024px) {
   font-size: 13px;
 }
 
+.close-dimmer img {
+  cursor: pointer;
+}
+
 
 /* Pricing */
 .pricing_block {

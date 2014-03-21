@@ -15,11 +15,6 @@ $( document ).ready(function() { // Document ready
 		$('#header').parallax("center", 0.5, false);
 	})
 
-	trackPageView();
-	setupMailChimp();
-
-
-
 /*-----------------------------------------------------------------------------------*/
 /*	02. NAVBAR STICKY + SELECTED
 /*-----------------------------------------------------------------------------------*/
@@ -201,18 +196,31 @@ function validateEmail(email) {
 		showSubscriptionForm("premium");
 	});
 
+	$('#mc-embedded-subscribe').click(function() {
+		var chosenPlan = $('#chosen-plan').val();
+		trackSubscriptionSubmit(chosenPlan);
+	})
+
+	$('.close-dimmer').click(function() {
+		toggleSubscriptionDimmer();
+	})
+
 	function showSubscriptionForm(chosenPlan) {
 		window.location.href = "#planos"
-		$('.page.dimmer').dimmer('show');
+		toggleSubscriptionDimmer();
 		$('#mce-EMAIL').focus();
 		$('#chosen-plan').val(chosenPlan);
 		trackChoosePlan(chosenPlan);
 	}
 
-	$('#mc-embedded-subscribe').click(function() {
-		var chosenPlan = $('#chosen-plan').val();
-		trackSubscriptionSubmit(chosenPlan);
-	})
+	function toggleSubscriptionDimmer() {
+		$('.page.dimmer').dimmer('toggle');
+	}
+
+	function showSubscriptionConfirmation() {
+		$('#dimmer-subscription').hide();
+		$('#dimmer-confirmation').show();
+	}
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -220,28 +228,56 @@ function validateEmail(email) {
 /*-----------------------------------------------------------------------------------*/
 
 	function trackPageView() {
-        console.log("page view tracked");
-        mixpanel.register();
-        mixpanel.track('page_view');
+		if (notSubscribed()) {
+	        console.log("'page_view' tracked");
+	        mixpanel.register();
+	        mixpanel.track('page_view');
+		} else {
+			console.log("already subscribed");
+		}
     }
 
     function trackChoosePlan(chosenPlan){
-    	console.log("choose plan tracked: plan => " + chosenPlan);
-        mixpanel.register({'plan': chosenPlan});
-        mixpanel.track('choose_plan');
+    	if (notSubscribed()) {
+	    	console.log("'choose_plan' tracked: plan => " + chosenPlan);
+	        mixpanel.register({'plan': chosenPlan});
+	        mixpanel.track('choose_plan');
+	    } else {
+			console.log("already subscribed");
+		}
     }
 
     function trackSubscriptionSubmit(chosenPlan) {
-    	console.log("subscription submit tracked: plan => " + chosenPlan);
-        mixpanel.register({'plan': chosenPlan});
-        mixpanel.track('subscription_submit');
+    	if(notSubscribed()) {
+	    	console.log("'subscription_submit' tracked: plan => " + chosenPlan);
+	        mixpanel.register({'plan': chosenPlan});
+	        mixpanel.track('subscription_submit');
+    	} else {
+			console.log("already subscribed");
+		}
     }
 
     function trackSubscriptionResponse(response) {
-        mixpanel.register({'plan': 'blablabla'});
-        if (response.result === 'success') {
-            mixpanel.track("subscription_success");
-       }
+		if (notSubscribed()) {
+	    	var chosenPlan = $('#chosen-plan').val();
+	        mixpanel.register({'plan': chosenPlan});
+
+	        if (response.result === 'success') {
+	        	console.log("'subscription_success' tracked: plan => " + chosenPlan);
+	            mixpanel.track("subscription_success");
+	    		$.cookie('subscribed', true, { expires: 7 });
+	       		showSubscriptionConfirmation();
+	        } else {
+	        	console.log("erro no mailchimp: " + response.msg);
+	        	alert("Houve um erro. Verifique se informou corretamente o seu endereço de e-mail.");
+	        }
+	    } else {
+			console.log("already subscribed");
+		}
+    }
+
+    function notSubscribed() {
+    	return $.cookie('subscribed') == undefined;
     }
 
 /*-----------------------------------------------------------------------------------*/
@@ -255,7 +291,7 @@ function validateEmail(email) {
 		    3: 'Verifique o seu endereço de email.',
 		    4: 'Verifique o seu endereço de email.',
 		    5: 'Verifique o seu endereço de email.',
-		    6: 'Houve um problema desconhecido. Entre em contato com digaoi@kerolivro.com.br para solicitar o seu convite.'
+		    6: 'Houve um problema desconhecido. Entre em contato com kerolivro@lendo.me para solicitar o seu convite.'
 		};
 		$('#mc-embedded-subscribe-form').ajaxChimp({
 		    url: 'http://lendo.us3.list-manage2.com/subscribe/post?u=f57b68c75f9b145d89a30c396&amp;id=45d8a9988c',
@@ -265,21 +301,12 @@ function validateEmail(email) {
 	}
 
 
+/*-----------------------------------------------------------------------------------*/
+/*	12. DOCUMENT.READY EVENTS
+/*-----------------------------------------------------------------------------------*/
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+	trackPageView();
+	setupMailChimp();
 
 
 });
