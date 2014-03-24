@@ -435,7 +435,7 @@ nav {
 /* 04. CONTAINER SECTION ================================================== */
 
 /* Section Vantagens  */
-.vantagens {
+section.vantagens {
     background: #FFF;
     border-top:1px solid #EEE;
     padding: 20px 0;
@@ -445,6 +445,7 @@ nav {
 .como-receber {
     background-color: #F8f8f8;
     border-top:1px solid #EEE;
+    padding-top: 20px;
 }
 .como-receber .passos {
     margin-top: 30px;
@@ -505,7 +506,7 @@ nav {
     font-size: 17px;
 }
 .content.modalidades .separador {
-    margin: 5px 0 5px 0;
+    margin: 5px 0;
     padding: 5px;
     text-align: center;
 }
@@ -514,13 +515,12 @@ nav {
     border-radius: 50%;
     color: #fff;
     font-family: 'latolight', sans-serif;
-    font-size: 14px;
-    height: 25px;
-    padding: 6px;
+    font-size: 13px;
+    letter-spacing: 1px;
+    padding: 5px;
     position: relative;
     text-align: center;
     vertical-align: middle;
-    width: 25px;
 }
 
 /* Section Mockup */
@@ -546,7 +546,7 @@ nav {
 	background: #FFF;}
 
 
-.scroll-to-vantagens {
+section.vantagens {
 	overflow: hidden;
 	z-index: 9999;
 	position: relative;}
@@ -769,22 +769,13 @@ form {
 /* 08. FOOTER SECTION ================================================== */
 
 
-
-
-/* Make it Fixed */
-
-#footerSpacer {
-    background-color: rgba(0, 0, 0, 0) !important;
-    display: block;
-    min-height: 170px;}
-
 /* Footer General */
 
 #footer {
 	bottom: 0;
   left: 0;
   padding: 40px 0 40px;
-  position: fixed;
+  /*position: fixed;*/
   width: 100%;
   font-size:14px;
   z-index: 1;
@@ -921,7 +912,7 @@ and (max-width : 568px) {
 
     #header .spinner_btn {display: inline-block; margin-left: 0px; width: 100%;}
 
-  	.vantagens .tiles.four_up > li {width:100%; padding-bottom: 20px;}
+  	section.vantagens .tiles.four_up > li {width:100%; padding-bottom: 20px;}
 
     .como-receber .content {margin-bottom: 20px;}
 
@@ -1167,9 +1158,7 @@ and (max-width : 1024px) {
     padding:10px 30px;
 }
 .pricing_block .botton_list .botton_link:hover {
-    color: #fff;
-    background: #32B7D6;
-    border: 1px solid #32B7D6;
+    background: #53CEEB;
 }
 
 

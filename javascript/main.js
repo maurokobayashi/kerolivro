@@ -76,7 +76,7 @@ var cbpAnimatedHeader = (function() {
 /*-----------------------------------------------------------------------------------*/
 
 
-			new cbpScroller( document.getElementById( 'scroll-to-vantagens' ) );
+			new cbpScroller( document.getElementById( 'vantagens' ) );
 
 
 /*-----------------------------------------------------------------------------------*/
@@ -269,10 +269,16 @@ function validateEmail(email) {
 	       		showSubscriptionConfirmation();
 	        } else {
 	        	console.log("erro no mailchimp: " + response.msg);
-	        	alert("Houve um erro. Verifique se informou corretamente o seu endereço de e-mail.");
+	        	if(duplicatedEmail(response.msg)) {
+	        		alert("Você já cadastrou este e-mail no Kerolivro.");
+	        	} else {
+	        		alert("Houve um erro. Verifique se informou corretamente o seu endereço de e-mail.");
+	        	}
 	        }
 	    } else {
+	    	alert("Você já estava cadastrado no Kerolivro. Verifique sua caixa de e-mail.");
 			console.log("already subscribed");
+			toggleSubscriptionDimmer();
 		}
     }
 
@@ -280,19 +286,15 @@ function validateEmail(email) {
     	return $.cookie('subscribed') == undefined;
     }
 
+    function duplicatedEmail(msg) {
+    	return msg.indexOf('já está inscrito') != -1;
+    }
+
 /*-----------------------------------------------------------------------------------*/
 /*	11. MAILCHIMP SETUP
 /*-----------------------------------------------------------------------------------*/
 
     function setupMailChimp(){
-		$.ajaxChimp.translations.pt = {
-		    1: 'Parabéns! Enviamos para você um email de confirmação.',
-		    2: 'Informe o seu endereço de email.',
-		    3: 'Verifique o seu endereço de email.',
-		    4: 'Verifique o seu endereço de email.',
-		    5: 'Verifique o seu endereço de email.',
-		    6: 'Houve um problema desconhecido. Entre em contato com kerolivro@lendo.me para solicitar o seu convite.'
-		};
 		$('#mc-embedded-subscribe-form').ajaxChimp({
 		    url: 'http://lendo.us3.list-manage2.com/subscribe/post?u=f57b68c75f9b145d89a30c396&amp;id=45d8a9988c',
 		    callback: trackSubscriptionResponse,
