@@ -68,8 +68,8 @@
 
 /* Selected text Color */
 
-::-moz-selection{background:#F68620;color:white}
-::selection{background:#F68620;color:white}
+::-moz-selection{background:#70cee4;color:white}
+::selection{background:#70cee4;color:white}
 
 
 body, html {
@@ -163,9 +163,12 @@ p a:hover {
 /* Button */
 
 .button {
-  background-color: #777;
+  background-color: transparent;
+  /*background-color: #777;*/
+  border: 1px solid #333;
   border-radius: 7px;
-  color: #fff;
+  color: #333;
+  /*color: #fff;*/
   font-family: 'latolight', sans-serif;
   text-transform: uppercase;
   padding:15px 20px;
@@ -911,7 +914,7 @@ and (max-width : 568px) {
     #header .button, .button2 {display: inline-block; line-height: 40px; font-size:14px; padding: 8px 10px; width: 100%;}
     #header .button {border: 1px solid #777; margin-top: 10px; }
     #header .button:hover {background-color: #777; color: #fff;}
-    #header .button2:hover, #header .button2:active {border: 1px solid #F68620;}
+    #header .button2:hover, #header .button2:active {border: 1px solid #70cee4;}
 
     #header .spinner_btn {display: inline-block; margin-left: 0px; width: 100%;}
 
