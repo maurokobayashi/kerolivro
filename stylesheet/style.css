@@ -438,14 +438,12 @@ nav {
 section.vantagens {
     background: #FFF;
     border-top:1px solid #EEE;
-    padding: 20px 0;
 }
 
 /* Section Como Receber Livros */
 .como-receber {
     background-color: #F8f8f8;
     border-top:1px solid #EEE;
-    padding-top: 20px;
 }
 .como-receber .passos {
     margin-top: 30px;
@@ -536,7 +534,6 @@ section.vantagens {
 .planos {
 	background: #F8f8f8;
 	border-top:1px solid #EEE;
-  padding-top: 25px;
 }
 
 /* Container  */
@@ -1045,12 +1042,11 @@ and (max-width : 1024px) {
 
 .photo-credits {
   bottom: 50px;
-  left: 0;
   height: 10px;
   margin: auto;
   padding-right: 40px;
   position: absolute;
-  right: 0;
+  right: 100px;
   text-align: right;
 }
 .photo-credits p {

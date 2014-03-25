@@ -84,7 +84,7 @@ var cbpAnimatedHeader = (function() {
 /*-----------------------------------------------------------------------------------*/
 
 
-$('.button').click(function(e){
+$('.smooth-scroll').click(function(e){
     $('html,body').scrollTo(this.hash,this.hash);
     e.preventDefault();
 });
@@ -230,7 +230,6 @@ function validateEmail(email) {
 	function trackPageView() {
 		if (notSubscribed()) {
 	        console.log("'page_view' tracked");
-	        mixpanel.register();
 	        mixpanel.track('page_view');
 		} else {
 			console.log("already subscribed");
