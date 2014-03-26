@@ -110,11 +110,11 @@
 
                     <!-- Button-->
                     <div class="button-area">
-                        <a class="spinner_btn smooth-scroll" href="#planos">
+                        <a id="btn-vp-to-planos" class="spinner_btn smooth-scroll" href="#planos">
                             <div class="default_state button2 blue">Cadastre-se agora mesmo</div>
                             <div class="hover_state button2 white">e garanta seu lugar</div>
                         </a>
-                        <a class="button smooth-scroll" href="#vantagens">
+                        <a id="btn-vp-to-vantagens" class="button smooth-scroll" href="#vantagens">
                             Saiba mais
                         </a>
                     </div>
@@ -143,6 +143,80 @@
 
             <!-- SECTION VANTAGENS ############################################### -->
             <section class="cbp-so-section vantagens">
+                <div class="row">
+                    <div class="one column"></div>
+                    <div class="eleven columns">
+                        <div class="row">
+                            <div class="two columns"></div>
+                            <div class="ten columns">
+                                <h3>Vantagens do Kerolivro</h3>
+                            </div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="row">
+                            <div class="two columns">
+                                <img src="image/vantagens-chance.png" style="height:80px;">
+                            </div>
+                            <div class="nine columns lefted">
+                                <ul>
+                                    <li>
+                                        <h5>Suas chances de conseguir livros se multiplicam</h5>
+                                        <p>Nós <b>combinamos automaticamente</b> os seus interesses com os de <b>milhares de outros leitores</b>. Por isso as <b>chances</b> de você conseguir os livros que deseja se multiplicam!</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">
+                                <img src="image/vantagens-envio.ico" style="height:80px;">
+                            </div>
+                            <div class="nine columns lefted">
+                                <ul>
+                                    <li>
+                                        <h5>Envio rápido e sem enrolação</h5>
+                                        <p>É chato ter que esperar dias até o livro ser enviado né? No Kerolivro, o <b>envio é sempre rápido</b> e você fica sabendo com antecedência <b>quando terá o livro em mãos</b>. </p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns">
+                                <img src="image/vantagens-notificacao.png" style="height:80px;">
+                            </div>
+                            <div class="nine columns lefted">
+                                <ul>
+                                    <li>
+                                        <h5>Não perca nada do que acontece por aqui</h5>
+                                        <p>Recebeu uma solicitação de troca? O livro foi postado nos Correios? Fechou uma venda? Relaxa, <b>você fica sabendo por e-mail</b> sobre tudo o que acontece no Kerolivro.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row last">
+                            <div class="two columns">
+                                <img src="image/vantagens-membro.png" style="height:90px; position:relative; top:-10px;">
+                            </div>
+                            <div class="nine columns lefted">
+                                <ul>
+                                    <li>
+                                        <h5>Todas as vantagens de ser membro do clube</h5>
+                                        <p>Sendo membro, você <b>aumenta suas chances</b> nas trocas, <b>tem prioridade</b> no recebimento, <b>ganha mais</b> nas vendas e participa toda semana de <b>sorteios de livros e descontos</b>.</p>
+                                    </li>
+                                </ul>
+                            </div>
+                        </div>
+                        <div class="row">
+                            <div class="two columns"></div>
+                            <div class="eight columns lefted">
+                                <a id="btn-vantagens-to-planos" class="button smooth-scroll" href="#planos">Participe do Kerolivro</a>
+                                <a class="secondary-action smooth-scroll desktop-only" href="#como-receber"> saiba como receber livros</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+<!--             <section class="cbp-so-section vantagens">
                 <div class="row">
                     <div class="twelve columns centered">
                         <h3>O Kerolivro</h3>
@@ -190,7 +264,7 @@
                         </div>
                     </div>
                 </div>
-            </section>
+            </section> -->
             <!-- END SECTION VANTAGENS ############################################### -->
 
 
@@ -238,7 +312,6 @@
                         <div class="content modalidades">
                             <div class="row">
                                 <!-- <p style="margin-top:10px;">Existem 3 formas de receber um livro:</p> -->
-                                <div class="clear"></div>
                                 <img src="image/troca-livro.png" style="height: 80px; width: 50px">
                                 <h5>Envie um livro em troca</h5>
                                 <p>É seguro e sem riscos de calote. O leitor com pior reputação na troca envia o livro antes.</p>
@@ -249,7 +322,7 @@
                             <div class="row">
                                 <img src="image/troca-ponto.png" style="height: 80px; width: 50px">
                                 <h5>Use seus pontos</h5>
-                                <p>Há duas maneiras de acumular pontos: enviando um livro para outro leitor ou comprando por R$14,90 cada.</p>
+                                <p>Há 2 maneiras de acumular pontos: envie um livro para outro leitor ou compre por R$14,90.</p>
                             </div>
                             <div class="row separador">
                                 <a>ou</a>
@@ -257,7 +330,7 @@
                             <div class="row">
                                 <img src="image/compra.png" style="width: 50px">
                                 <h5>Compre o livro</h5>
-                                <p>Se o livro estiver à venda, você pode comprá-lo utilizando cartão de crédito, boleto ou transferência. O pagamento é online em ambiente seguro.</p>
+                                <p>Se o livro estiver à venda, você pode comprá-lo utilizando cartão de crédito, boleto, etc. O pagamento é online em ambiente seguro.</p>
                             </div>
                         </div>
                     </div>
@@ -270,6 +343,12 @@
                             <img src="image/like.png" style="position: relative; top:-10px;">
                             <p>Assim que o livro chegar, nos conte o que achou. O estado do livro é coerente com a descrição? O envio foi rápido? Teve algum problema? Sua avaliação é importante para <b>garantir a qualidade</b> do Kerolivro.</p>
                         </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+                <div class="row">
+                    <div class="twelve columns centered">
+                        <a id="btn-como-receber-to-planos" class="button smooth-scroll" href="#planos">Participe do Kerolivro</a>
                     </div>
                 </div>
             </section>

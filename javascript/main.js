@@ -237,6 +237,16 @@ function validateEmail(email) {
 		}
     }
 
+    function trackScrollingButton(button) {
+		if (notSubscribed()) {
+	        console.log("'scrolling_button' tracked: button => " + button);
+	        mixpanel.register({'button': button});
+	        mixpanel.track('scrolling_button');
+		} else {
+			console.log("already subscribed");
+		}
+    }
+
     function trackChoosePlan(chosenPlan){
     	if (notSubscribed()) {
 	    	console.log("'choose_plan' tracked: plan => " + chosenPlan);
@@ -291,8 +301,28 @@ function validateEmail(email) {
     	return msg.indexOf('já está inscrito') != -1;
     }
 
+
 /*-----------------------------------------------------------------------------------*/
-/*	11. MAILCHIMP SETUP
+/*	11. SCROLLING BUTTONS
+/*-----------------------------------------------------------------------------------*/
+
+	$('#btn-vp-to-planos').click(function() {
+		trackScrollingButton("vp-to-planos");
+	})
+	$('#btn-vp-to-vantagens').click(function() {
+		trackScrollingButton("vp-to-vantagens");
+	})
+	$('#btn-vantagens-to-planos').click(function() {
+		trackScrollingButton("vantagens-to-planos");
+	})
+	$('#btn-como-receber-to-planos').click(function() {
+		trackScrollingButton("como-receber-to-planos");
+	})
+
+
+
+/*-----------------------------------------------------------------------------------*/
+/*	12. MAILCHIMP SETUP
 /*-----------------------------------------------------------------------------------*/
 
     function setupMailChimp(){
@@ -305,7 +335,7 @@ function validateEmail(email) {
 
 
 /*-----------------------------------------------------------------------------------*/
-/*	12. DOCUMENT.READY EVENTS
+/*	13. DOCUMENT.READY EVENTS
 /*-----------------------------------------------------------------------------------*/
 
 	trackPageView();

@@ -446,6 +446,29 @@ section.vantagens {
     background: #FFF;
     border-top:1px solid #EEE;
 }
+section.vantagens .row {
+  margin-bottom: 10px;
+}
+section.vantagens .row.last {
+  margin-bottom: 0px;
+}
+
+section.vantagens ul li {
+  margin-bottom: 20px;
+}
+section.vantagens ul li h5 {
+  font-size: 18px;
+  /*text-transform: uppercase;*/
+}
+section.vantagens ul li p {
+  margin-top: 2px;
+  line-height: 20px;
+}
+
+a.secondary-action {
+  margin-left: 30px;
+  text-decoration: underline;
+}
 
 /* Section Como Receber Livros */
 .como-receber {
