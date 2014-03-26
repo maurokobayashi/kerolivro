@@ -198,7 +198,8 @@ function validateEmail(email) {
 
 	$('#mc-embedded-subscribe').click(function() {
 		var chosenPlan = $('#chosen-plan').val();
-		trackSubscriptionSubmit(chosenPlan);
+		var email = $('#mce-EMAIL').val();
+		trackSubscriptionSubmit(chosenPlan, email);
 	})
 
 	$('.close-dimmer').click(function() {
@@ -246,10 +247,11 @@ function validateEmail(email) {
 		}
     }
 
-    function trackSubscriptionSubmit(chosenPlan) {
+    function trackSubscriptionSubmit(chosenPlan, email) {
     	if(notSubscribed()) {
-	    	console.log("'subscription_submit' tracked: plan => " + chosenPlan);
+	    	console.log("'subscription_submit' tracked: plan => " + chosenPlan + ", email => " + email);
 	        mixpanel.register({'plan': chosenPlan});
+	        mixpanel.register({'email': email});
 	        mixpanel.track('subscription_submit');
     	} else {
 			console.log("already subscribed");
