@@ -450,11 +450,11 @@ section.vantagens .row {
   margin-bottom: 10px;
 }
 section.vantagens .row.last {
-  margin-bottom: 0px;
+  margin-bottom: 10px;
 }
 
 section.vantagens ul li {
-  margin-bottom: 20px;
+  margin-bottom: 12px;
 }
 section.vantagens ul li h5 {
   font-size: 18px;
